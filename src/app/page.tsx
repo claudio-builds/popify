@@ -124,6 +124,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Demo Section */}
+      <section id="demo" className="container mx-auto px-4 py-20 scroll-mt-20">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
+          Veja como funciona
+        </h2>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          As notificações aparecem automaticamente no canto da tela. Olhe no canto inferior esquerdo! 👇
+        </p>
+        
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 relative overflow-hidden min-h-[400px] border border-gray-200">
+            {/* Fake browser header */}
+            <div className="bg-white rounded-t-xl border border-gray-200 p-3 flex items-center gap-2 mb-4">
+              <div className="flex gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div className="w-3 h-3 rounded-full bg-green-400"></div>
+              </div>
+              <div className="flex-1 bg-gray-100 rounded-lg px-4 py-1.5 text-sm text-gray-500 ml-4">
+                sualoja.com.br
+              </div>
+            </div>
+            
+            {/* Fake website content */}
+            <div className="bg-white rounded-b-xl border border-t-0 border-gray-200 p-8">
+              <div className="h-8 bg-gray-200 rounded w-1/3 mb-6"></div>
+              <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="h-32 bg-gray-100 rounded-lg"></div>
+                <div className="h-32 bg-gray-100 rounded-lg"></div>
+                <div className="h-32 bg-gray-100 rounded-lg"></div>
+              </div>
+              <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
+              <div className="h-4 bg-gray-200 rounded w-2/3"></div>
+            </div>
+            
+            {/* Demo notification inside the fake browser */}
+            <div 
+              className={`absolute bottom-12 left-12 transition-all duration-500 ${
+                showNotification ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
+              }`}
+            >
+              <div className="bg-white rounded-lg shadow-2xl p-4 max-w-xs border border-gray-100 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
+                  {notification.name[0]}
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm text-gray-800">
+                    <span className="font-semibold">{notification.name}</span> de {notification.location}
+                  </p>
+                  <p className="text-xs text-gray-600">
+                    {notification.action} <span className="font-medium text-purple-600">{notification.item}</span>
+                  </p>
+                  <p className="text-[10px] text-gray-400 mt-0.5">há {notification.time}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <p className="text-center text-gray-500 mt-6 text-sm">
+            ☝️ Essa é uma demonstração ao vivo. A notificação muda a cada 4 segundos.
+          </p>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="container mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
