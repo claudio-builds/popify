@@ -368,6 +368,12 @@ export default function Home() {
           <p className="text-gray-600 text-sm">
             © 2026 Popify. Todos os direitos reservados.
           </p>
+          <p className="text-gray-400 text-xs mt-2">
+            Ferramentas gratuitas por{' '}
+            <a href="https://pay.kiwify.com.br/sCqZ6r1" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-600 transition-colors">
+              Claudio Tools
+            </a>
+          </p>
         </div>
       </footer>
     </main>
