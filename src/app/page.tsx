@@ -356,6 +356,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Interlinks */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="bg-gray-50 rounded-2xl p-8">
+          <h2 className="text-lg font-bold text-gray-700 mb-6 flex items-center gap-2">
+            🛠️ Ferramentas Gratuitas por Claudio Tools
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              { name: "Calculadora MEI", desc: "Calcule seus impostos como MEI", url: "https://calculadora-mei-app.vercel.app", icon: "📊" },
+              { name: "Calculadora de Preços", desc: "Forme o preço ideal do seu produto", url: "https://calculadora-preco-ten.vercel.app", icon: "💰" },
+              { name: "Gerador de Recibos", desc: "Crie recibos profissionais grátis", url: "https://gerador-recibos-tau.vercel.app", icon: "🧾" },
+              { name: "Gerador de Contratos", desc: "Contratos prontos para usar", url: "https://gerador-contratos-nu.vercel.app", icon: "📄" },
+              { name: "Curva ABC", desc: "Análise de Pareto para seu estoque", url: "https://curva-abc-app.vercel.app", icon: "📈" },
+            ].map((tool) => (
+              <a
+                key={tool.name}
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 p-3 rounded-xl hover:bg-white border border-transparent hover:border-gray-200 transition-all group"
+              >
+                <span className="text-xl mt-0.5">{tool.icon}</span>
+                <div>
+                  <p className="font-semibold text-gray-700 group-hover:text-purple-600 transition-colors text-sm">{tool.name}</p>
+                  <p className="text-gray-400 text-xs mt-0.5">{tool.desc}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="container mx-auto px-4 py-12 border-t border-gray-200">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -367,12 +399,6 @@ export default function Home() {
           </div>
           <p className="text-gray-600 text-sm">
             © 2026 Popify. Todos os direitos reservados.
-          </p>
-          <p className="text-gray-400 text-xs mt-2">
-            Ferramentas gratuitas por{' '}
-            <a href="https://pay.kiwify.com.br/sCqZ6r1" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-600 transition-colors">
-              Claudio Tools
-            </a>
           </p>
         </div>
       </footer>
